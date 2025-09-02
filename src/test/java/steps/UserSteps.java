@@ -15,6 +15,7 @@ import static io.restassured.RestAssured.given;
 
 public class UserSteps {
     private Response response;
+    String API_KEY = System.getProperty("apiKey");
 
     @Given("the base API is set")
     public void the_base_api_is_set() {
@@ -28,7 +29,7 @@ public class UserSteps {
 
         response = given()
                 .header("Content-Type", "application/json")
-                .header("x-api-key", "reqres-free-v1")
+                .header("x-api-key", API_KEY)
                 .body(body)
                 .when()
                 .post("/users");
@@ -46,7 +47,7 @@ public class UserSteps {
     @When("I send a GET request with delay {int}")
     public void i_send_a_get_request_with_delay(Integer delay) {
         response = given()
-                .header("x-api-key", "reqres-free-v1")
+                .header("x-api-key", API_KEY)
                 .queryParam("delay", delay)
                 .when()
                 .get("/users");

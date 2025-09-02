@@ -1,64 +1,67 @@
-# Rest Assured Project - ReqRes API Testing
+# Rest Assured API Automation Project
 
-## Overview
-This project was created to explore and test the public **ReqRes API** using Rest Assured, Cucumber, TestNG, and Extent Reports.  
-The goal was to implement API tests for different scenarios such as user creation and retrieving user data.
+## 📌 Project Overview
+This project demonstrates API automation using **Rest Assured**, **TestNG**, and **Maven**.  
+The implementation focuses on testing the `https://reqres.in/api/users` endpoint for user creation and retrieval.  
 
----
+## 🛠️ Tools & Technologies
+- **Java 17+**
+- **Maven**
+- **Rest Assured**
+- **TestNG**
+- **Extent Reports**
 
-## Trials and Findings
+## 📂 Project Structure
+```
+src
+ └── test
+      ├── java
+      │    ├── tests        # Contains API test classes
+      │    └── utils        # Utilities (if needed)
+      └── resources         # Configs / test data (future use)
+```
 
-### 1. Base Setup
-- Configured the base URI as: `https://reqres.in/api`.
-- Verified GET endpoints (such as `/users`) work successfully **without authentication**.
-- Responses returned user data correctly when testing with query parameters (e.g., `delay`).
+## 🚀 How to Run
 
----
+### 1. Clone the Project
+```bash
+git clone <repo-url>
+cd <project-folder>
+```
 
-### 2. POST Request - User Creation
-- Attempted to send a POST request with body:
-  ```json
-  {
-    "name": "morpheus",
-    "job": "leader"
-  }
-  ```
-  using endpoint: `https://reqres.in/api/users`.
+### 2. Run Tests with Maven
+You must pass the API key at runtime as a system property.
 
-- **Issue Encountered**:  
-  The response consistently returned:
-  ```json
-  {
-    "error": "Missing API key"
-  }
-  ```
+```bash
+mvn clean test -DapiKey=your_api_key_here
+```
 
-- After checking the official Swagger documentation (`https://reqres.in/api-docs/`):
-  - No endpoint named **`/api/users` for create user** was found in the provided Swagger UI.
-  - Documentation mainly includes **list users, single user, register, login, and delayed response**.
-  - The "Create User" example shown in some tutorials **does not appear in the Swagger documentation**.
+### 3. Example Test Execution
+- **POST Request** to create a user:
+  - Endpoint: `https://reqres.in/api/users`
+  - Headers: `x-api-key` (provided via terminal)
+  - Body:  
+    ```json
+    {
+      "name": "morpheus",
+      "job": "leader"
+    }
+    ```
+  - Expected Response: `201 Created`
 
----
+- **GET Request** to fetch users:
+  - Endpoint: `https://reqres.in/api/users?page=2`
+  - Expected Response: `200 OK`
 
-### 3. Register/Login Endpoints
-- Tried the following endpoints:
-  - `POST /register`
-  - `POST /login`
-- Both require email and password fields as input.
-- With invalid or missing inputs, API responded with appropriate error messages.
+## 📊 Reports
+After execution, an **Extent Report** is generated under:
+```
+/test-output/ExtentReports/
+```
+Open `index.html` in a browser to view the detailed test report.
 
----
-
-## Conclusion
-- **GET requests** (like `/users` and `/users?delay=3`) are working fine without requiring authentication.
-- **POST requests for register/login** require specific fields (`email`, `password`).
-- **Create User endpoint is not available in the official Swagger documentation**, which is why POST requests to `/api/users` failed with *"Missing API key"*.
-
----
-
-## Next Steps
-1. Continue validating available endpoints (`/users`, `/register`, `/login`).
-2. Adjust the test scenarios to match **only supported endpoints** listed in the official documentation.
-3. Ensure test data is parameterized and not hard-coded.
-
----
+## ✅ Best Practices Followed
+- No hardcoded values (API key passed via terminal).
+- Reusable test structure.
+- TestNG for test execution & assertions.
+- Extent Reports for reporting.
