@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Sep 1, 2025 08:23:19 PM</span></a>
+<a href="#"><span class="badge badge-primary">Sep 2, 2025 03:42:26 PM</span></a>
 </li>
 </ul>
 </div>
@@ -66,7 +66,7 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -74,25 +74,25 @@
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="fail" test-id="1"
+        <li class="test-item"  status="pass" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Create user and verify status</p>
             <p class="text-sm">
-              <span>8:23:19 PM</span> / <span>00:00:01:542</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>3:42:27 PM</span> / <span>00:00:01:948</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Create user and verify status</h5>
-<span class='badge badge-success'>09.01.2025 8:23:19 PM</span>
-<span class='badge badge-danger'>09.01.2025 8:23:21 PM</span>
-<span class='badge badge-default'>00:00:01:542</span>
+<h5 class="test-status text-pass">Create user and verify status</h5>
+<span class='badge badge-success'>09.02.2025 3:42:27 PM</span>
+<span class='badge badge-danger'>09.02.2025 3:42:29 PM</span>
+<span class='badge badge-default'>00:00:01:948</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -104,32 +104,163 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>8:23:20 PM</td>
+        <td>3:42:27 PM</td>
         <td>
-          Base URI set to: https://reqres.in
+          Base URI set to: https://reqres.in/api
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>8:23:21 PM</td>
+        <td>3:42:29 PM</td>
         <td>
           POST Request Body: {"name":"morpheus","job":"leader"}
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>8:23:21 PM</td>
+        <td>3:42:29 PM</td>
         <td>
           POST Response: {
-    "error": "Missing API key"
+    "name": "morpheus",
+    "job": "leader",
+    "id": "129",
+    "createdAt": "2025-09-02T13:42:29.062Z"
 }
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>8:23:21 PM</td>
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:42:29 PM</td>
         <td>
-          Scenario failed: Create user and verify status
+          Verified status code: 201
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:42:29 PM</td>
+        <td>
+          Scenario passed: Create user and verify status
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Get users with delay</p>
+            <p class="text-sm">
+              <span>3:42:29 PM</span> / <span>00:00:04:030</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Get users with delay</h5>
+<span class='badge badge-success'>09.02.2025 3:42:29 PM</span>
+<span class='badge badge-danger'>09.02.2025 3:42:33 PM</span>
+<span class='badge badge-default'>00:00:04:030</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:42:29 PM</td>
+        <td>
+          Base URI set to: https://reqres.in/api
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:42:32 PM</td>
+        <td>
+          GET Request with delay=3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:42:32 PM</td>
+        <td>
+          GET Response: {
+    "page": 1,
+    "per_page": 6,
+    "total": 12,
+    "total_pages": 2,
+    "data": [
+        {
+            "id": 1,
+            "email": "george.bluth@reqres.in",
+            "first_name": "George",
+            "last_name": "Bluth",
+            "avatar": "https://reqres.in/img/faces/1-image.jpg"
+        },
+        {
+            "id": 2,
+            "email": "janet.weaver@reqres.in",
+            "first_name": "Janet",
+            "last_name": "Weaver",
+            "avatar": "https://reqres.in/img/faces/2-image.jpg"
+        },
+        {
+            "id": 3,
+            "email": "emma.wong@reqres.in",
+            "first_name": "Emma",
+            "last_name": "Wong",
+            "avatar": "https://reqres.in/img/faces/3-image.jpg"
+        },
+        {
+            "id": 4,
+            "email": "eve.holt@reqres.in",
+            "first_name": "Eve",
+            "last_name": "Holt",
+            "avatar": "https://reqres.in/img/faces/4-image.jpg"
+        },
+        {
+            "id": 5,
+            "email": "charles.morris@reqres.in",
+            "first_name": "Charles",
+            "last_name": "Morris",
+            "avatar": "https://reqres.in/img/faces/5-image.jpg"
+        },
+        {
+            "id": 6,
+            "email": "tracey.ramos@reqres.in",
+            "first_name": "Tracey",
+            "last_name": "Ramos",
+            "avatar": "https://reqres.in/img/faces/6-image.jpg"
+        }
+    ],
+    "support": {
+        "url": "https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral",
+        "text": "Tired of writing endless social media content? Let Content Caddy generate it for you."
+    }
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:42:33 PM</td>
+        <td>
+          Verified first user data: {id=1, email=george.bluth@reqres.in, first_name=George, last_name=Bluth, avatar=https://reqres.in/img/faces/1-image.jpg}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:42:33 PM</td>
+        <td>
+          Scenario passed: Get users with delay
         </td>
       </tr>
   </tbody>
@@ -151,25 +282,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Sep 1, 2025 08:23:19 PM</h3>
+<h3>Sep 2, 2025 03:42:26 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Sep 1, 2025 08:23:21 PM</h3>
+<h3>Sep 2, 2025 03:42:33 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>0</h3>
+<h3>2</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>1</h3>
+<h3>0</h3>
 </div></div>
 </div>
 </div>
@@ -185,12 +316,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='0%'>
-<b>0</b> tests passed
+<div><small data-tooltip='100%'>
+<b>2</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='100%'><b>1</b> tests failed,
+<small data-tooltip='0%'><b>0</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -208,10 +339,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='0%'><b>0</b> events passed</small></div>
+<div><small data-tooltip='40%'><b>4</b> events passed</small></div>
 <div>
-<small data-tooltip='25%'><b>1</b> events failed,
-<b data-tooltip='%'>3</b> others
+<small data-tooltip='0%'><b>0</b> events failed,
+<b data-tooltip='%'>6</b> others
 </small>
 </div>
 </div>
@@ -227,7 +358,7 @@
 </div></div>
 <script>
 var timeline = {
-"Create user and verify status":1.542
+"Create user and verify status":1.948,"Get users with delay":4.03
 };
 </script>
 <div class="row">
@@ -236,8 +367,8 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 0,
-failParent: 1,
+passParent: 2,
+failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -253,11 +384,11 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 0,
-failEvents: 1,
+passEvents: 4,
+failEvents: 0,
 warningEvents: 0,
 skipEvents: 0,
-infoEvents: 3
+infoEvents: 6
 };
 </script>        </div>
       </div>
